@@ -47,11 +47,9 @@ const AboutHero = () => {
 
       {/* 2. Enhanced Background Layer */}
       <div className="absolute inset-0 z-0">
-        {/* Thematic Glows */}
         <div className="hero-glow absolute top-[-10%] left-[-5%] w-[400px] h-[400px] bg-emerald-600 rounded-full"></div>
         <div className="hero-glow absolute bottom-[-10%] right-[-5%] w-[400px] h-[400px] bg-amber-600 rounded-full"></div>
 
-        {/* Dynamic Scanning Grid Nodes */}
         {[20, 40, 60, 80].map((pos, i) => (
           <div
             key={`v-${i}`}
@@ -67,12 +65,11 @@ const AboutHero = () => {
           />
         ))}
 
-        {/* Technical Grid Overlay */}
         <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(#10b981_1px,transparent_1px)] bg-[size:30px_30px]"></div>
       </div>
 
-      {/* 3. Content Section */}
-      <div className="relative z-10 text-center px-6 max-w-6xl mx-auto antialiased">
+      {/* 3. Content Section - Added pt-20 for Mobile Spacing */}
+      <div className="relative z-10 text-center px-6 max-w-6xl mx-auto antialiased pt-20 md:pt-0">
         
         {/* Floating Badge */}
         <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-emerald-500/5 border border-emerald-500/20 mb-10 animate-bounce-slow">
@@ -81,11 +78,11 @@ const AboutHero = () => {
               <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
            </span>
            <span className="text-emerald-400 font-black tracking-[0.4em] uppercase text-[9px] italic">
-             Legacy Intelligence Protocol
+              Legacy Intelligence Protocol
            </span>
         </div>
 
-        {/* Main Headline with Emerald & Gold Accent */}
+        {/* Main Headline */}
         <h1 className="text-4xl md:text-5xl font-black text-white mb-8 leading-[1] uppercase tracking-tighter">
           Mastering <span className="text-emerald-500 drop-shadow-[0_0_15px_rgba(16,185,129,0.5)] italic">Global</span><br />
           <span className="relative">
@@ -96,7 +93,6 @@ const AboutHero = () => {
           </span>
         </h1>
 
-        {/* High-Impact Description */}
         <div className="max-w-3xl mx-auto space-y-8">
           <p className="text-gray-400 text-lg md:text-2xl font-medium leading-relaxed tracking-tight">
             VISACONSULT is the <span className="text-white font-bold">Gold Standard</span> in international mobility. 
