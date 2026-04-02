@@ -1,6 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Globe, Shield, Zap } from 'lucide-react';
+import hero1 from "../assets/hero-1.jpg";
+import hero2 from "../assets/images/hero-2.jpg";
+import hero3 from "../assets/images/hero-3.jpg";
+import hero4 from "../assets/images/hero-4.jpg";
 
 const Hero = () => {
   const [currentImg, setCurrentImg] = useState(0);
