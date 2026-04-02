@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, ChevronRight, Zap } from 'lucide-react';
+import navbarLogo from "../assets/images/navbar-logo.jpeg";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -40,7 +41,7 @@ const Navbar = () => {
               {/* Main Logo Container */}
               <div className="relative w-10 h-10 md:w-12 md:h-12 rounded-full overflow-hidden bg-white border border-white/20 z-10">
                 <img 
-                  src="src/assets/images/navbar-logo.jpeg" 
+                  src={navbarLogo} 
                   alt="Logo" 
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
