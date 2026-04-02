@@ -11,10 +11,10 @@ const Hero = () => {
   const canvasRef = useRef(null);
 
   const images = [
-    "src/assets/hero-1.jpg", 
-    "src/assets/images/hero-2.jpg", 
-    "src/assets/images/hero-3.jpg", 
-    "src/assets/images/hero-4.jpg",
+    hero1, 
+    hero2, 
+    hero3, 
+    hero4
   ];
 
   // --- Background Particles (Emerald Theme) ---
