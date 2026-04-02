@@ -63,12 +63,12 @@ const LoaderContact = () => {
         {/* --- 4. TEXT CONTENT --- */}
         <div className="text-center mt-16 relative">
           <h2 className="text-4xl md:text-5xl font-black text-white tracking-tighter mb-4 italic uppercase">
-            Visa<span className="text-emerald-400">Consult</span>
+            LINK_<span className="text-emerald-400">INITIALIZED</span>
           </h2>
           
           <div className="relative inline-block">
             <span className="bg-gradient-to-r from-emerald-400 via-white to-violet-500 bg-clip-text text-transparent font-mono text-sm font-bold tracking-[0.5em] animate-text-shimmer">
-              PROTOCOL_INITIALIZED
+              Your Journey Begins Here
             </span>
             <div className="absolute -bottom-2 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-emerald-500 to-transparent"></div>
           </div>

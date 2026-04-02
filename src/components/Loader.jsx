@@ -123,6 +123,15 @@ const Loader = () => {
               Consult
             </span>
           </h1>
+
+          <h3 className="text-2xl md:text-3xl font-black text-white tracking-[0.25em] uppercase mb-4 drop-shadow-[0_0_20px_rgba(16,185,129,0.5)]">
+  <span className="opacity-80">SYSTEM_</span>
+  <span className="relative inline-block ml-1 italic bg-gradient-to-r from-emerald-400 via-teal-300 to-emerald-500 text-transparent bg-clip-text animate-gradient-x">
+    BOOTING...
+    {/* Cursor effect */}
+    <span className="absolute -right-4 top-0 h-full w-[2px] bg-emerald-500 animate-bounce"></span>
+  </span>
+</h3>
           
           <div className="flex flex-col items-center gap-6">
             <div className="h-[1px] w-32 bg-gradient-to-r from-transparent via-emerald-400 to-transparent"></div>

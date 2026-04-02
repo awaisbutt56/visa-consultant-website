@@ -24,8 +24,8 @@ const ServiceColumn = ({ service, index, visible }) => {
       className={`relative group flex-1 md:hover:flex-[3] transition-all duration-500 ease-in-out border-l border-white/5 bg-[#0a1120] overflow-hidden transform-gpu ${visible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"}`}
       style={{ transitionDelay: `${index * 150}ms` }} 
     >
-      {/* Background Gradient Layer */}
-      <div className={`absolute inset-0 bg-gradient-to-br ${service.bg} to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
+      {/* Background Gradient Layer - Always visible on mobile */}
+      <div className={`absolute inset-0 bg-gradient-to-br ${service.bg} to-transparent opacity-40 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500`}></div>
       
       {/* Moving Tech Scanline */}
       <div className="absolute top-0 left-0 w-full h-[2px] bg-emerald-400/50 opacity-0 group-hover:opacity-100 group-hover:animate-scan"></div>
@@ -40,15 +40,15 @@ const ServiceColumn = ({ service, index, visible }) => {
           {/* Title Logic */}
           <h3 className="text-3xl md:text-4xl font-black text-white leading-none uppercase tracking-tighter italic">
             {service.title.split(' ')[0]} <br/> 
-            <span className="text-slate-500 group-hover:text-emerald-300 transition-colors duration-300">
+            <span className="text-emerald-300 md:text-slate-500 md:group-hover:text-emerald-300 transition-colors duration-300">
               {service.title.split(' ')[1]}
             </span>
           </h3>
         </div>
 
-        {/* Content visible on hover */}
-        <div className="opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500 delay-100">
-          <p className="text-slate-300 text-xs leading-relaxed mb-8 font-bold uppercase tracking-[0.2em] line-clamp-2 max-w-[200px]">
+        {/* Content visible always on mobile, only on hover for desktop */}
+        <div className="opacity-100 md:opacity-0 md:group-hover:opacity-100 translate-y-0 md:translate-y-4 md:group-hover:translate-y-0 transition-all duration-500 delay-100">
+          <p className="text-slate-300 text-xs leading-relaxed mb-8 font-bold uppercase tracking-[0.2em] line-clamp-3 md:line-clamp-2 max-w-[280px] md:max-w-[200px]">
             {service.desc}
           </p>
           
@@ -61,7 +61,7 @@ const ServiceColumn = ({ service, index, visible }) => {
         </div>
 
         {/* Big Background Number */}
-        <div className="absolute -bottom-6 -right-4 text-[8rem] font-black text-white/[0.03] tracking-tighter pointer-events-none group-hover:text-emerald-500/[0.05] transition-all italic select-none">
+        <div className="absolute -bottom-6 -right-4 text-[6rem] md:text-[8rem] font-black text-white/[0.03] tracking-tighter pointer-events-none group-hover:text-emerald-500/[0.05] transition-all italic select-none">
           0{index + 1}
         </div>
       </div>
@@ -104,7 +104,7 @@ export default function SleekServices() {
         </div>
 
         {/* Main Service Container */}
-        <div className="relative z-10 flex flex-col md:flex-row min-h-[550px] border border-white/5 rounded-[3rem] overflow-hidden bg-[#050b18] shadow-[0_30px_60px_rgba(0,0,0,0.5)]">
+        <div className="relative z-10 flex flex-col md:flex-row min-h-[550px] border border-white/5 rounded-[2rem] md:rounded-[3rem] overflow-hidden bg-[#050b18] shadow-[0_30px_60px_rgba(0,0,0,0.5)]">
           {SERVICES.map((s, i) => (
             <ServiceColumn key={i} service={s} index={i} visible={vis} />
           ))}
