@@ -8,7 +8,7 @@ import Footer from './components/Footer'
 import StudyVisa from './pages/StudyVisa'
 import WorkPermit from './pages/WorkPermit'
 import TouristVisa from './pages/TouristVisa'
-import Residency from './pages/residency'
+import Residency from './pages/Residency'
 import ApplicationForm from './pages/ApplicationForm'
 import Footerpolicy from './pages/Footerpolicy'
 
